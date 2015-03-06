@@ -106,25 +106,28 @@ SETGATE(intr, 0,1,2,3);
 请分析 [list.h](https://github.com/chyyuu/ucore_lab/blob/master/labcodes/lab2/libs/list.h)内容中大致的含义，并能include这个文件，利用其结构和功能编写一个数据结构链表操作的小C程序
 - [x]  
 
-> #include 
+>
+```
+#include 
 #include "list.h"
 struct list_entry root;
 struct list_entry tempadd;
 int main(int argc, const char * argv[]) {
 // insert code here...
-list_init(&root);
-if(list_empty(&root)){
-printf("the list is empty!\n");
-}
-list_add(&tempadd, &root);
-printf("%d, %x\n", &root, &root.next);
-list_add_before(&tempadd, &root);
-printf("%d, %d\n", &root, &root.prev);
-list_add(&root, &root);
-list_del(&tempadd);
-list_del_init(&root);
-return 0;
-}
+   list_init(&root);
+   if(list_empty(&root)){
+   printf("the list is empty!\n");
+   }
+   list_add(&tempadd, &root);
+   printf("%d, %x\n", &root, &root.next);
+   list_add_before(&tempadd, &root);
+   printf("%d, %d\n", &root, &root.prev);
+   list_add(&root, &root);
+   list_del(&tempadd);
+   list_del_init(&root);
+   return 0;
+  }
+```
 
 ---
 

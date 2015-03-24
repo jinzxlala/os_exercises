@@ -128,8 +128,6 @@ va 0xce6c3f32, pa 0x007d4f32
 ```
 va 0xcd82c07c, pa 0x0c20907c, pde_idx 0x00000336, pde_ctx  0x00037003, pte_idx 0x0000002c, pte_ctx  0x0000c20b
 ```
-
->>>>>>> 43254690bddb9a9fe432a7589084e7a04388bd34
 - [x]  
 
 > 
@@ -137,9 +135,7 @@ va 0xcd82c07c, pa 0x0c20907c, pde_idx 0x00000336, pde_ctx  0x00037003, pte_idx 0
 程序如下：
 #include <iostream>
 using namespace std;
-
 unsigned va, pa;
-
 int main()
 {
   while (1)

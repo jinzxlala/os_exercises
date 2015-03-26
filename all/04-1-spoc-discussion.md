@@ -32,6 +32,19 @@ gcc -O0 -o goodlocality goodlocality.c
 time ./goodlocality
 ```
 可以看到其执行时间。
+```
+看到的输出结果为：
+10485760 count computing over!
+real 0m0.043s
+user 0m0.028s
+sys 0m0.005s
+将i和j的枚举顺序调换后，输出结果为
+10485760 count computing over!
+real 0m0.149s
+user 0m0.125s
+sys  0m0.012s
+通过上述实验可以发现，充分利用空间的局部性可以高效地提高程序运行的效率。
+```
 
 ## 小组思考题目
 ----
@@ -91,6 +104,28 @@ Virtual Address 106f:
   --> pde index:0x3  pde contents:(valid 1, pfn 0x2d)
     --> pte index:0x14  pte contents:(valid 0, pfn 0x06)
       --> To Disk Sector Address 0x167 --> Value: 2c
+```
+>
+```
+答案如下：
+Virtual Address 6653:
+  -->pde index:0x19 pde contents:(valid 0, pfn 7f)
+    Fault (page directory entry not valid)
+Virtual Address 1c13:
+  -->pde index:0x07 pde contents:(valid 1, pfn 3d)
+    -->pte index:0x00 pte contents:(valid 1, pt 76)
+      -->To Physical Address 0xed3 --> Value: 12
+Virtual Address 6890:
+  -->pde index:0x1a pde contents:(valid 0, pfn 7f)
+    Fault (page directory entry not valid)
+Virtual Address 0af6:
+  -->pde index:0x02 pde contents:(valid 1, pfn 21)
+    -->pte index:0x17 pte contents:(valid 0, pt 7f)
+      -->To Disk Sector Page 0x7f, Fatal.
+Virtual Address 1e6f:
+  -->pde index:0x07 pde contents:(valid 1, pfn 3d)
+    -->pte index:0x13 pte contents:(valid 0, pt 16)
+      -->To Disk Sector Address 0x2cf --> Value: 1c
 ```
 
 ## 扩展思考题

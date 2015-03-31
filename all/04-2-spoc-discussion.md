@@ -34,6 +34,8 @@
 设Sn为物理页面数为n的LRU算法维护栈，S(n+k)为物理页面数为n+k时的LRU算法维护栈。
 题目为，在任意时刻，Sn∈S(n+k)且任意x∈Sn,存在x1∈S(n+k),满足loc(x) <= loc(x1),即物理页面数量增加不会导致缺页率降低。
 
+>
+```
 采用数学归纳法。
 <1>Sn和S(n+k)都为空，满足题目条件
 <2>设时间T=t时满足条件，那么T = t + 1时，对页面请求xt，有以下几种情况：
@@ -42,6 +44,7 @@
    3:xt∉Sn,且xt∉S(n+k),此时都在栈尾加入xt，Sn中为n，S(n+k)中为n+k。对于弹出的元素，若两者相同，则依旧满足条件，若不相同，则在S(n+k)弹出的元素在Sn中已经找不到。依然满足Sn包含于S(n+k);
 即T=t+1时，条件成立。
 综上所述，原命题得证，LRU算法不会出现belady现象。
+```
 
 (2)（spoc）根据你的`学号 mod 4`的结果值，确定选择四种替换算法（0：LRU置换算法，1:改进的clock 页置换算法，2：工作集页置换算法，3：缺页率置换算法）中的一种来设计一个应用程序（可基于python, ruby, C, C++，LISP等）模拟实现，并给出测试。请参考如python代码或独自实现。
  - [页置换算法实现的参考实例](https://github.com/chyyuu/ucore_lab/blob/master/related_info/lab3/page-replacement-policy.py)

@@ -16,7 +16,11 @@
 
  - 调度算法支撑框架中的各个函数指针的功能是啥？会被谁在何种情况下调用？
  - 调度函数schedule()的调用函数分析，可以了解进程调度的原因。请分析ucore中所有可能的调度位置，并说明可能的调用原因。
+<<<<<<< HEAD
  
+=======
+  
+>>>>>>> 3e73799638520dc8eea114cae6000c637637c5bd
 ### 时间片轮转调度算法
 
  - 时间片轮转调度算法是如何基于调度算法支撑框架实现的？
@@ -41,7 +45,10 @@
 
 ### 练习用的[lab6 spoc exercise project source code](https://github.com/chyyuu/ucore_lab/tree/master/labcodes_answer/lab6_result)
 
+<<<<<<< HEAD
 代码见[代码](https://github.com/jinzxlala/ucore_lab/tree/master/labcodes_answer/lab6_result)，exit[输出文件](https://github.com/jinzxlala/ucore_lab/blob/master/labcodes_answer/lab6_result/exit_schedule_log.txt),priority[输出文件](https://github.com/jinzxlala/ucore_lab/blob/master/labcodes_answer/lab6_result/priority_schedule_log.txt)
 
 
+=======
+>>>>>>> 3e73799638520dc8eea114cae6000c637637c5bd
 

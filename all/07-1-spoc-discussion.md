@@ -113,7 +113,7 @@ int FetchAndAdd(int *ptr) {
   return old;
 }
 ```
->
+
 ```
 .var mutex
 .var ptr

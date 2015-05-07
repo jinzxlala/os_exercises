@@ -76,7 +76,7 @@ int CompareAndSwap(int *ptr, int expected, int new) {
   return actual;
 }
 ```
->
+
 ```
 .var mutex
 .var ptr
@@ -103,7 +103,7 @@ mov  $0, mutex
 
 ret
 ```
->
+
 ```
 Fetch-And-Add
 
@@ -113,7 +113,7 @@ int FetchAndAdd(int *ptr) {
   return old;
 }
 ```
->
+
 ```
 .var mutex
 .var ptr
